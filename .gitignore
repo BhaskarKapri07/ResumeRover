@@ -357,6 +357,5 @@ pip-selfcheck.json
 # Spacy Model
 Spacy_NER_Model/
 
-image/
 # vscode
 .vscode/
