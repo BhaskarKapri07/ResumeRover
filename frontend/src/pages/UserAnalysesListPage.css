@@ -1,0 +1,38 @@
+.user-analyses {
+  padding: 20px;
+}
+
+.user-analyses__title {
+  margin-bottom: 20px;
+  text-align: center;
+  /* Additional styling */
+}
+
+.user-analyses__list {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.user-analyses__item {
+  background-color: var(--bg-variant); /* Lighter background for the card */
+  color: var(--text-color);
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  /* Shadows and more to make it look like a card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-analyses__item:hover {
+  background-color: var(
+    --border-color
+  ); /* Slightly darker background on hover */
+  /* Or any other hover effect you'd like */
+}
+
+.user-analyses__job-title {
+  font-weight: bold;
+}

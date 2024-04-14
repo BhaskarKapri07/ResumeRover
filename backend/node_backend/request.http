@@ -1,0 +1,107 @@
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBlYTY5MTY3ZjIzYzczZWQ2ZmM4YzIiLCJpYXQiOjE3MTI4MzUzNzIsImV4cCI6MTcxMjgzODk3Mn0._lj-bPt7mUpK7nMYX2tfOpciZwqHCPWsX-J2kAr-wfU
+### Uploading single resume to mongo
+POST http://localhost:3000/api/resumes/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+Authorization: Bearer {{token}}
+
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="resume"; filename="Bhaskar_Kapri.pdf"
+Content-Type: application/pdf
+
+< C:/Users/Administrator/Downloads/Resume/Bhaskar_Kapri.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+
+
+### Uploading multiple resumes to mongo
+POST http://localhost:3000/api/resumes/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Authorization: Bearer {{token}}
+
+--WebAppBoundary
+Content-Disposition: form-data; name="resume"; filename="Bhaskar_Kapri.pdf"
+Content-Type: application/pdf
+
+< C:/Users/Administrator/Downloads/Resume/Bhaskar_Kapri.pdf
+--WebAppBoundary
+Content-Disposition: form-data; name="resume"; filename="Smit-Kapani-Resume-02-2024.pdf"
+Content-Type: application/pdf
+
+< C:/Users/Administrator/Downloads/Smit-Kapani-Resume-02-2024.pdf
+--WebAppBoundary
+Content-Disposition: form-data; name="resume"; filename="Resume.pdf"
+Content-Type: application/pdf
+
+< C:/Users/Administrator/Downloads/Resume/Resume.pdf
+--WebAppBoundary--
+
+
+### Parse Resumes
+GET http://localhost:3000/api/parse/parse-resumes HTTP/1.1
+Authorization: Bearer {{token}}
+
+
+
+
+@host = http://localhost:3000
+@jobUrl = https://jobs.lever.co/upstox/9f9d8b62-7e9f-4012-a701-6c157855a984
+
+### Analyze resume against job description
+POST {{host}}/api/analyze HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+
+
+
+### Signup Test
+POST http://localhost:3000/api/auth/signup
+Content-Type: application/json
+
+{
+  "email": "testuser1@email.com",
+  "password": "password"
+}
+
+
+
+### Login Test
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "testuser@email.com",
+  "password": "pass@123"
+}
+
+
+### Access Protected Route - Fetch Resumes
+GET http://localhost:3000/api/parse/parse-resumes
+Authorization: Bearer {{token}}
+
+### 
+
+POST http://localhost:3000/api/sessions/create
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+
+### 
+@sessionId = 6609026564d4601d865b0a97
+
+GET http://localhost:3000/api/parse/parse-resumes?sessionId={{sessionId}}
+Authorization: Bearer {{token}}
+
+
+###
+GET http://localhost:3000/api/user-analyses
+Authorization: Bearer {{token}}
+
+###
+GET http://localhost:3000/api/analyses/6617c608e51a2e317f0e82d6
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+

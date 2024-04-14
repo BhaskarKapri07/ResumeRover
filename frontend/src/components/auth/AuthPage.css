@@ -1,0 +1,31 @@
+/* AuthPage.css */
+/* .auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: var(
+    --background-color
+  ); /* Use your defined global color variables */
+/* } */
+/* 
+.auth-page__container {
+  width: 100%;
+  max-width: 400px; /* Adjust as necessary based on your design preferences */
+/* }  */
+
+.auth-page__toggle-text {
+  text-align: center;
+  margin-top: -8rem;
+}
+
+.auth-page__toggle-button {
+  background: none;
+  border: none;
+  background-color: var(--bg-variant);
+  color: var(--text-color);
+  /* color: var(--primary-color)'' */
+  cursor: pointer;
+  text-decoration: underline;
+}

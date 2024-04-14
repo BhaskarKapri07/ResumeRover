@@ -1,0 +1,74 @@
+/* Register.css */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  padding: 20px;
+  background-color: var(--bg);
+  margin-top: -7rem;
+}
+
+.register__container {
+  width: 100%;
+  max-width: 400px; /* Adjust width as per your design */
+  background: var(--bg-variant); /* Same as for Login */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.error-message {
+  color: var(--primary); /* Define your error color in global.css */
+  margin-bottom: 20px;
+}
+
+.register__title {
+  color: var(--primary); /* Text color for dark/light mode */
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register__input {
+  padding: 10px;
+  margin-bottom: 20px; /* Spacing between inputs */
+  background-color: var(--bg);
+  border: 1px solid var(--border-color); /* Define border color in global.css for themes */
+  border-radius: 5px;
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.register__input::placeholder {
+  color: var(--secondary-text-color);
+}
+
+.register__button {
+  padding: 10px 20px;
+  background-color: var(--primary); /* Primary button color */
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Transition for a smooth color change */
+}
+
+.register__button:hover {
+  background-color: var(
+    --accent
+  ); /* Darker shade of primary color or another hover color */
+}
+
+/* Add responsive adjustments as necessary */
+@media (max-width: 600px) {
+  .register__container {
+    padding: 20px;
+  }
+}

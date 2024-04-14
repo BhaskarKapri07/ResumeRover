@@ -1,0 +1,135 @@
+.resume-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: var(--bg);
+  height: 100vh;
+  margin-top: -7rem;
+}
+
+.resume-upload__title {
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+
+.resume-upload__form {
+  width: 100%;
+  max-width: 500px;
+  background-color: var(--bg-variant);
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-upload__form-group {
+  margin-bottom: 16px;
+}
+
+.resume-upload__label {
+  display: block;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.resume-upload__input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  background-color: var(--bg);
+}
+
+.resume-upload__input--file {
+  padding: 12px;
+}
+
+.resume-upload__button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: var(--primary);
+  color: var(--text-color);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.resume-upload__button:hover {
+  background-color: var(--accent);
+}
+
+.resume-upload__form-group--file {
+  border: 2px dashed var(--border-color);
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: grab;
+  background-color: var(--bg);
+  transition: border-color 0.3s ease;
+}
+
+.resume-upload__form-group--file:hover {
+  border-color: var(--primary);
+}
+
+.resume-upload__file-label {
+  display: block;
+  width: 100%;
+  cursor: grab;
+}
+
+.resume-upload__file-button {
+  color: var(--text-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+}
+
+/* This will make sure the file input is accessible to screen readers */
+.resume-upload__input--file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.resume-upload__loading {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resume-upload__loading::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--primary); /* Primary color for the outer ring */
+  border-top-color: transparent; /* Make the top part transparent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .resume-upload__form {
+    padding: 16px;
+  }
+}

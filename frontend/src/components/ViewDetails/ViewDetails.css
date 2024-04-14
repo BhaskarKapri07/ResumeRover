@@ -1,0 +1,50 @@
+.view-details {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-variant);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.view-details__title {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.view-details__section {
+  margin-bottom: 20px;
+}
+
+.view-details__heading {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.view-details__list {
+  list-style: none;
+  padding: 0;
+}
+
+.view-details__item {
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.view-details__item--satisfied {
+  background-color: var(--border-color);
+}
+
+.view-details__item--not-satisfied {
+  background-color: var(--bg-variant);
+}
+
+.view-details__explanation {
+  color: var(--secondary-text-color);
+  font-size: smaller;
+  margin-top: 5px;
+}
+
+/* Additional styling can be added based on the specific needs or responsive design */

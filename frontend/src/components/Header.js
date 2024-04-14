@@ -1,0 +1,44 @@
+import React from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate hook for navigation
+import "./Header.css";
+
+const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const hideButtonPaths = ["/"];
+
+  const showButtons = !hideButtonPaths.includes(location.pathname);
+
+  // Handler for navigating to the My Analyses page
+  const navigateToMyAnalyses = () => {
+    navigate("/my-analyses");
+  };
+
+  return (
+    <header className="header">
+      <h1 className="header__logo" >ResumeRover</h1>
+      <div className="header__actions">
+        <button className="header__toggle" onClick={toggleTheme}>
+          {isLightMode ? <FaSun /> : <FaMoon />}
+        </button>
+        {showButtons && (
+          <button
+            onClick={navigateToMyAnalyses}
+            className="header__my-analyses-button"
+          >
+            My Analyses
+          </button>
+        )}
+        {showButtons && (
+          <button onClick={handleLogout} className="header__logout-button">
+            Logout
+          </button>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;

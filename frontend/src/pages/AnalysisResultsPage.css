@@ -1,0 +1,54 @@
+.analysis-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  background-color: var(--bg);
+}
+
+.analysis-results__title {
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.analysis-results__job-title {
+  color: var(--primary);
+  /* color: #ff5d00; */
+  margin-bottom: 16px;
+}
+
+.analysis-results__item {
+  background-color: var(--bg-variant);
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.analysis-results__name {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+.analysis-results__satisfied {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.analysis-results__details-button {
+  padding: 8px 16px;
+  background-color: var(--primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.analysis-results__details-button:hover {
+  background-color: var(--accent);
+}
