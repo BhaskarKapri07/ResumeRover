@@ -37,6 +37,6 @@ To get a local copy up and running, follow these simple example steps:
    ```
    cd ResumeRover
    ```
-3. Refer to the frontend and backend README files for instructions on setting up each part of the application.
+3. Refer to the frontend and backend README files for each part of the application.
 
 ---
