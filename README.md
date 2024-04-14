@@ -4,7 +4,7 @@
 
 ResumeRover is an innovative web application designed to automate and streamline the hiring process by efficiently analyzing resumes against job descriptions. This project leverages modern web technologies and generative AI to reduce the manual effort involved in screening candidates, enhancing the recruitment process's speed and accuracy.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/eUdHY9dxI4Y?si=OggeCKn_yMi_P7iy" title="Resume Rover" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Resume Rover](image/image.png)](https://youtu.be/eUdHY9dxI4Y "ResumeRover")
 
 The application consists of two main components:
 
