@@ -6,22 +6,20 @@ ResumeRover is an innovative web application designed to automate and streamline
 
 [![Resume Rover](image/image.png)](https://youtu.be/eUdHY9dxI4Y "ResumeRover")
 
-The application consists of two main components:
-
-- **Frontend**: A user-friendly interface built with React, allowing users to interact with the application seamlessly.
-- **Backend**: A robust server built with Node.js and Express that handles API requests, processes data, and integrates AI functionalities.
 
 ## Key Features
 
+- **Resume Upload**: Users can upload multiple candidate resumes in a standardized format, which are then stored and processed.
 - **Resume Parsing**: Automates the extraction of relevant information from resumes.
 - **Job Description Analysis**: Analyzes job descriptions to identify key requirements.
 - **Candidate Matching**: Uses AI algorithms to match candidates with job openings based on their qualifications and the job requirements.
-- **User Management**: Allows recruiters to manage their job postings and review candidate matches.
+- **Results Visualization**: Analysis results are displayed in a user-friendly manner, offering insights into which candidates best fit the job requirements.
 
 ## Technology Stack
 
-- **Frontend**: React, Redux for state management.
-- **Backend**: Node.js, Express, Python for AI components and Gemini LLM.
+The project is split into two main components:
+- **Frontend**: The user interface, built with React, provides interactive and dynamic web pages to handle user inputs and display data.
+- **Backend**: A Node.js/Express application that handles API requests, processes data, levrages LLM capacity to match, and interacts with a MongoDB database and a python backend that holds NER model to extract information from job descriptions. 
 
 For detailed information on the setup, dependencies, and specific configurations of each component, please refer to the respective README files in the frontend and backend directories.
 
@@ -31,7 +29,7 @@ To get a local copy up and running, follow these simple example steps:
 
 1. Clone the repo:
    ```
-   git clone https://github.com/YourUsername/ResumeRover.git
+   git clone https://github.com/BhaskarKapri07/ResumeRover.git
    ```
 2. Navigate to the project directory:
    ```

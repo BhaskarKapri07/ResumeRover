@@ -1,46 +1,60 @@
-# Getting Started with Create React App and Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
-## Available Scripts
+# Frontend for Resume Analysis Platform
 
-In the project directory, you can run:
+The frontend of the Resume Analysis Platform is designed to provide a seamless user experience for uploading resumes, entering job descriptions, and viewing detailed analysis results. Built with React, this part of the application offers a dynamic and responsive interface that efficiently interacts with the backend to fetch and display data.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: Utilized for building the user interface with a component-based architecture, allowing for reusable components and efficient data management through states and props.
+- **React Router**: Handles in-app navigation, ensuring that users can seamlessly move between different parts of the application without full page reloads.
+- **Axios**: Used for making HTTP requests to the backend API, handling both data fetching and posting.
+- **Sass/CSS**: Styles the application, providing a clean and modern look and feel.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before you begin, ensure you have the following installed:
+- Node.js (LTS version recommended)
+- npm 
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To set up the frontend locally, follow these steps:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository** (if not already done for the entire project):
+   ```bash
+   git clone https://github.com/BhaskarKapri07/ResumeRover.git
+   cd ResumeRover/frontend
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Environment Configuration**:
+   - Create a `.env` file in the root of the frontend directory.
+   - Add necessary environment variables such as the backend API URL:
+     ```plaintext
+     REACT_APP_API_URL=http://localhost:3000/api
+     ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Running the Project
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To run the frontend on your local machine:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will start the development server and open the application in your default web browser. By default, the frontend runs on `http://localhost:3000`.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate through the application to:
+- **Register/Login**: Access user-specific functionalities.
+- **Upload Resumes and Job Descriptions**: Submit files and data required for analysis.
+- **View Analysis Results**: See detailed comparisons and assessments based on the uploaded data.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
