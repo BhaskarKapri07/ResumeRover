@@ -4,6 +4,8 @@ const { fetchResumes } = require("../services/resumeService");
 const { parseJobDescription } = require("../services/jobDescriptionService");
 import { authenticateToken } from "../middlewares/authMiddleware";
 import { Analysis } from "../models/AnalysisModel";
+import {scrapeAndExtract} from "../services/jobDescriptionServ";
+
 import axios from "axios";
 
 interface AuthRequest extends Request {
@@ -31,9 +33,10 @@ router.post(
       console.log(jobUrl);
       console.log("session Id from analysis Route", sessionId);
 
-      const parsedJobDesc = await parseJobDescription(jobUrl);
+      const parsedJobDesc = await scrapeAndExtract(jobUrl);
+      console.log('printing parsedJobDesc', parsedJobDesc)
       console.log("title");
-      console.log(parsedJobDesc.data.data.title);
+      console.log(parsedJobDesc.title);
       console.log("parsed job desc");
       console.log(parsedJobDesc);
       // Parse resume data (assuming you have this function implemented)
@@ -50,8 +53,9 @@ router.post(
           params: { sessionId },
         }
       );
-      console.log("----parsed resume----");
-      console.log(parsedResume.data);
+      // console.log("----parsed resume---- :", parsedResume);
+      console.log('-------------------')
+      console.log('parsedResume.data: ', parsedResume.data);
 
       // Call the job description parser endpoint with the job URL
 
@@ -64,7 +68,7 @@ router.post(
 
       const newAnalysis = new Analysis({
         userId: userId,
-        jobDetails: parsedJobDesc.data.data,
+        jobDetails: parsedJobDesc,
         candidates: analysisResults,
       });
       // console.log("newAnalysis", newAnalysis);

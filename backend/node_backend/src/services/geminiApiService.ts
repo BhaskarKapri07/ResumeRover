@@ -17,15 +17,15 @@ export const analyzeWithGeminiApi = async (jobDesc: any, resumeJson: any) => {
   // console.log(typeof resumeJson);
   // console.log("----printing jobDesc .data---");
   // // console.log(jobDesc.data);
-  const jobDescText: string = JSON.stringify(jobDesc.data.data);
-  console.log(typeof jobDesc.data);
+  const jobDescText: string = JSON.stringify(jobDesc);
+  console.log(typeof jobDesc);
   // console.log("----printing jobDesc .data.data---");
   // console.log(jobDesc.data.data);
 
   const analysisResults: any[] = [];
 
   const generationConfig = {
-    temperature: "0.3",
+    temperature: "0.5",
   };
   const model = genAI.getGenerativeModel({
     model: "gemini-1.0-pro",

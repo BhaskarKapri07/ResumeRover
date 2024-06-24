@@ -24,10 +24,10 @@ import type { TextItem, TextItems } from "./types";
  * }
  */
 export const readPdf = async (buffer:Buffer): Promise<TextItems> => {
-  console.log('before getDocument', buffer)
+  // console.log('before getDocument', buffer)
   const uint8Array = new Uint8Array(buffer);
   const pdfFile = await pdfjs.getDocument(uint8Array).promise;
-  console.log('after getDocument')
+  // console.log('after getDocument')
   let textItems: TextItems = [];
 
   for (let i = 1; i <= pdfFile.numPages; i++) {
