@@ -22,6 +22,7 @@
 
 .header__toggle,
 .header__my-analyses-button,
+.header__new-analyses-button,
 .header__logout-button {
   padding: 0.5rem 1rem;
   margin-left: 1rem;

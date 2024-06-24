@@ -16,6 +16,10 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
     navigate("/my-analyses");
   };
 
+  const newAnalyis = () =>{
+    navigate("/resume-upload");
+  }
+
   return (
     <header className="header">
       <h1 className="header__logo" >ResumeRover</h1>
@@ -34,6 +38,11 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
         {showButtons && (
           <button onClick={handleLogout} className="header__logout-button">
             Logout
+          </button>
+        )}
+        {showButtons && (
+          <button onClick={newAnalyis} className="header__new-analyses-button">
+            New Analysis
           </button>
         )}
       </div>
