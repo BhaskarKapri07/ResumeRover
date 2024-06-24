@@ -17,9 +17,13 @@ export const authSlice = createSlice({
       localStorage.removeItem("token");
       sessionStorage.clear() // Clear token from storage
     },
+    newAnalysis: (state) => {
+      state.token = localStorage.getItem("token");
+      sessionStorage.clear() // Clear token from storage
+    }
   },
 });
 
-export const { login, logout } = authSlice.actions;
+export const { login, logout, newAnalysis } = authSlice.actions;
 
 export default authSlice.reducer;

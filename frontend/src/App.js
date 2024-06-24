@@ -18,6 +18,7 @@ function App() {
     dispatch(logout()); // Dispatch logout action
     navigate("/"); // Navigate to login page after logout
   };
+  
 
   const toggleTheme = () => {
     setIsLightMode(!isLightMode);

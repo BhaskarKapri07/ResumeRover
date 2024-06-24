@@ -1,11 +1,15 @@
 import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { newAnalysis } from "../features/auth/authSlice"; 
 import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate hook for navigation
 import "./Header.css";
 
 const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
+
 
   const hideButtonPaths = ["/"];
 
@@ -16,8 +20,10 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
     navigate("/my-analyses");
   };
 
-  const newAnalyis = () =>{
+  const handleNewAnalysis = () =>{
+    dispatch(newAnalysis())
     navigate("/resume-upload");
+
   }
 
   return (
@@ -41,7 +47,7 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
           </button>
         )}
         {showButtons && (
-          <button onClick={newAnalyis} className="header__new-analyses-button">
+          <button onClick={handleNewAnalysis} className="header__new-analyses-button">
             New Analysis
           </button>
         )}
