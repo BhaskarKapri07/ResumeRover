@@ -22,7 +22,10 @@ router.get(
     console.log('sessionId', sessionId);
 
     try {
+      console.log('fetching resumes')
       const resumeBuffers = await fetchResumes(userId, sessionId);
+      // console.log('resumes fetched', resumeBuffers)
+      console.log('Parsing resumes')
       const parsedResumes = await parseResumes(resumeBuffers);
       res.json(parsedResumes);
     } catch (error) {

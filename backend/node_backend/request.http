@@ -1,17 +1,16 @@
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjBlYTY5MTY3ZjIzYzczZWQ2ZmM4YzIiLCJpYXQiOjE3MTI4MzUzNzIsImV4cCI6MTcxMjgzODk3Mn0._lj-bPt7mUpK7nMYX2tfOpciZwqHCPWsX-J2kAr-wfU
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2Njc3YTYyZWE1NWJkMGE4OWEyY2I3NDQiLCJpYXQiOjE3MTkyMTMyNTEsImV4cCI6MTcxOTIxNjg1MX0.axfLzHqqCiPUvmc-j_6DbyHukXQl7XT7n5MS6QBA3Vs
+
 ### Uploading single resume to mongo
 POST http://localhost:3000/api/resumes/upload HTTP/1.1
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 Authorization: Bearer {{token}}
 
-
 ------WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="resume"; filename="Bhaskar_Kapri.pdf"
+Content-Disposition: form-data; name="resume"; filename="Resume_Apr.pdf"
 Content-Type: application/pdf
 
-< C:/Users/Administrator/Downloads/Resume/Bhaskar_Kapri.pdf
+< C:/Users/Machine/Downloads/Resume_Apr.pdf
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
-
 
 
 
@@ -24,7 +23,7 @@ Authorization: Bearer {{token}}
 Content-Disposition: form-data; name="resume"; filename="Bhaskar_Kapri.pdf"
 Content-Type: application/pdf
 
-< C:/Users/Administrator/Downloads/Resume/Bhaskar_Kapri.pdf
+< C:/Users/Machine/Downloads/Resume_Apr.pdf
 --WebAppBoundary
 Content-Disposition: form-data; name="resume"; filename="Smit-Kapani-Resume-02-2024.pdf"
 Content-Type: application/pdf
@@ -72,8 +71,8 @@ POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "testuser@email.com",
-  "password": "pass@123"
+  "email": "testuser1@email.com",
+  "password": "password"
 }
 
 
@@ -84,12 +83,12 @@ Authorization: Bearer {{token}}
 ### 
 
 POST http://localhost:3000/api/sessions/create
-Authorization: Bearer {{token}}
+Authorization: Bearer {{token}} 
 Content-Type: application/json
 
 
 ### 
-@sessionId = 6609026564d4601d865b0a97
+@sessionId = 6677a649a55bd0a89a2cb747
 
 GET http://localhost:3000/api/parse/parse-resumes?sessionId={{sessionId}}
 Authorization: Bearer {{token}}
@@ -100,7 +99,7 @@ GET http://localhost:3000/api/user-analyses
 Authorization: Bearer {{token}}
 
 ###
-GET http://localhost:3000/api/analyses/6617c608e51a2e317f0e82d6
+GET http://localhost:3000/api/analyses/6675becc042ea7b0af42506e
 Content-Type: application/json
 Authorization: Bearer {{token}}
 

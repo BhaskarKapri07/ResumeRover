@@ -16,7 +16,7 @@ const ResumeSchema = new Schema(
 
 // MongoDB connection URI
 const mongoURI =
-  "some uri" // Replace with  actual connection string
+"write your URI"
 
 mongoose
   .connect(mongoURI)
@@ -27,6 +27,7 @@ const Resume = mongoose.model("Resume", ResumeSchema);
 async function saveResumesToFiles() {
   try {
     const resumes = await Resume.find({}); // Fetch all resumes
+    console.log(resumes)
 
     resumes.forEach(async (resume, index) => {
       if (resume.data && resume.filename) {
@@ -35,9 +36,14 @@ async function saveResumesToFiles() {
           resume.filename || `Resume${index + 1}.pdf`
         }`;
 
+        const base64String = resume.data.toString();
+        console.log('base64String: ', base64String)
+        // console.log(resume.data)
         // Write the binary data to a PDF file
-        // fs.writeFileSync(filePath, resume.data);
-        // console.log(`Saved resume to ${filePath}`);
+        console.log(Buffer.isBuffer(resume.data));
+        const pdfFile = resume.data
+        fs.writeFileSync(filePath, pdfFile);
+        console.log(`Saved resume to ${filePath}`);
         const uint8Array = new Uint8Array(resume.data);
         const pdfDoc = await pdfjs.getDocument(uint8Array).promise;
         const page = await pdfDoc.getPage(1);

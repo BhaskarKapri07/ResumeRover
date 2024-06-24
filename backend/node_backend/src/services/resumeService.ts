@@ -11,4 +11,8 @@ export const fetchResumes = async (
 
   return resumes.map((resume) => resume.data);
   // return resumes.map((resume) => Buffer.from(resume.data.toString(), "base64"));
+  // return resumes.map((resume) =>{
+  //   const base64Data = resume.data.toString();
+  //   return Buffer.from(base64Data, 'base64');
+  // })
 };
