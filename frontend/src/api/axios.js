@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an instance of axios
 const customAxios = axios.create({
-  baseURL: "http://localhost:3000/api", // Your API base URL
+  baseURL: "https://resumerover.onrender.com/api", // Your API base URL
 });
 
 // Set up an interceptor to include the token in the headers of all requests
