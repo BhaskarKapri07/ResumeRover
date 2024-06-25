@@ -158,8 +158,16 @@ const AnalysisResultsPage = () => {
   if (isLoading) {
     return (
       <>
-        <div>Analyzing CVs</div>
-        <div>Please Wait...</div>
+        <div className="analysis-results__loading">Analyzing CVs</div>
+        <div className="analysis-results__loading-text">Please Wait...</div>
+        <div className="analysis-results__info">
+          <p className="analysis-results__info-title">Did you know?</p>
+          <ul className="analysis-results__info-list">
+            <li>Manually, it takes approximately 5-10 mins to analyze a single CV.</li>
+            <li>Automated analysis can significantly speed up the process.</li>
+            <li>Our system ensures consistency and accuracy in evaluating resumes.</li>
+          </ul>
+        </div>
         <Spinner />
       </>
     );

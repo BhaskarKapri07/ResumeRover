@@ -42,13 +42,13 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
           </button>
         )}
         {showButtons && (
-          <button onClick={handleLogout} className="header__logout-button">
-            Logout
+          <button onClick={handleNewAnalysis} className="header__new-analyses-button">
+            New Analysis
           </button>
         )}
         {showButtons && (
-          <button onClick={handleNewAnalysis} className="header__new-analyses-button">
-            New Analysis
+          <button onClick={handleLogout} className="header__logout-button">
+            Logout
           </button>
         )}
       </div>

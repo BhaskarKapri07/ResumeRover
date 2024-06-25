@@ -4,6 +4,7 @@
   align-items: center;
   padding: 32px;
   background-color: var(--bg);
+  justify-content: center; 
 }
 
 .analysis-results__title {
@@ -51,4 +52,36 @@
 
 .analysis-results__details-button:hover {
   background-color: var(--accent);
+}
+
+.analysis-results__loading {
+  color: var(--text-color);
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.analysis-results__loading-text {
+  color: var(--text-color);
+  margin-bottom: 32px;
+}
+
+.analysis-results__info {
+  background-color: var(--bg-variant);
+  padding: 16px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.analysis-results__info-title {
+  color: var(--primary);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.analysis-results__info-list {
+  color: var(--text-color);
+  list-style: disc inside;
 }

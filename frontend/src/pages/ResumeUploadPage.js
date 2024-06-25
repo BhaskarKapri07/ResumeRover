@@ -93,7 +93,9 @@ const ResumeUploadPage = () => {
           />
           <label htmlFor="file" className="resume-upload__file-label">
             <div id="file" className="resume-upload__file-button">
-              Drag or click to upload CVs or resumes
+            {selectedFiles.length === 0
+                ? "Drag or click to upload CVs or resumes"
+                : `${selectedFiles.length} resume(s) uploaded`}
             </div>
           </label>
         </div>
