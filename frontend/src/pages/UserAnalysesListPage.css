@@ -1,10 +1,14 @@
 .user-analyses {
   padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .user-analyses__title {
   margin-bottom: 20px;
   text-align: center;
+  font-size: 24px;
+  color: var(--primary);
   /* Additional styling */
 }
 
@@ -21,18 +25,24 @@
   margin-bottom: 10px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  /* Shadows and more to make it look like a card */
+  transition: background-color 0.3s, box-shadow 0.3s;  /* Shadows and more to make it look like a card */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .user-analyses__item:hover {
   background-color: var(
     --border-color
-  ); /* Slightly darker background on hover */
-  /* Or any other hover effect you'd like */
+  );
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 .user-analyses__job-title {
   font-weight: bold;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.user-analyses__date {
+  font-size: 14px;
+  color: var(--primary);
 }
