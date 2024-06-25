@@ -4,11 +4,13 @@ import bcrypt from "bcrypt";
 interface IUser extends Document {
   email: string;
   password: string;
+  isVerified: boolean;
 }
 
 const userSchema = new mongoose.Schema({
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
+  isVerified: { type: Boolean, default: false },
 });
 
 userSchema.pre<IUser>("save", async function (next) {

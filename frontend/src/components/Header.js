@@ -26,6 +26,15 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
 
   }
 
+  // const handleLogin = () => {
+  //   navigate("/login");
+  // };
+
+  // const handleRegister = () => {
+  //   navigate("/register");
+  // };
+  
+
   return (
     <header className="header">
       <h1 className="header__logo" >ResumeRover</h1>

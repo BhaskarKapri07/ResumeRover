@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/auth/Login";
+import VerifyEmail from "./components/VerifyEmail";
 import Register from "./components/auth/Register";
 import ResumeUploadPage from "./pages/ResumeUploadPage";
 import AnalysisResultsPage from "./pages/AnalysisResultsPage";
@@ -16,8 +17,10 @@ const AppRoutes = () => {
   return (
     <Routes>
       {/* <Route path="/" element={<Dashboard />} /> */}
-      <Route path="/" element={<AuthPage />} />
+      <Route path="/" element={<Login />} />
+      <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Register />} />
+      <Route path="/verify-email" element={<VerifyEmail />} />
       <Route path="/resume-upload" element={<ResumeUploadPage />} />
       <Route path="analysis-results" element={<AnalysisResultsPage />} />
       <Route

@@ -16,7 +16,7 @@ function App() {
 
   const handleLogout = () => {
     dispatch(logout()); // Dispatch logout action
-    navigate("/"); // Navigate to login page after logout
+    navigate("/login"); // Navigate to login page after logout
   };
   
 

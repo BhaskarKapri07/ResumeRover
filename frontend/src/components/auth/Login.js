@@ -17,6 +17,7 @@ const Login = () => {
     setErrorMessage("");
 
     try {
+      console.log('sent req')
       const response = await customAxios.post(
         "/auth/login",
         { email, password }
@@ -38,6 +39,10 @@ const Login = () => {
       }
     }
   };
+
+  const handleRegister = () => {
+    navigate("/signup");
+  }
 
   return (
     <div className="login">
@@ -69,6 +74,12 @@ const Login = () => {
           Free demo version. Not for active commercial use. Intended for
           evaluation and testing purposes only.
         </p>
+      <p className="login-page__toggle-text">
+              Don't have an account?{" "}
+              <button onClick={handleRegister} className="login-page__toggle-button">
+                Register here
+              </button>
+            </p>
       </div>
     </div>
   );
