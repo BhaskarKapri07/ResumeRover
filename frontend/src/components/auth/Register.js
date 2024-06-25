@@ -37,7 +37,7 @@ const Register = () => {
 
         const templateParams = {
           user_email: email,
-          verify_link: `hhttps://resume-rover.vercel.app/verify-email?token=${response.data.token}` 
+          verify_link: `https://resume-rover.vercel.app/verify-email?token=${response.data.token}` 
         }
 
         emailjs.send('service_p8h4vhi', 'template_6uptjsg', templateParams)
