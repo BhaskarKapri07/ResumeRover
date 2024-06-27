@@ -9,6 +9,7 @@ import CandidateDetailsPage from "./pages/CandidateDetailsPage";
 import UserAnalysesPage from "./pages/UserAnalysisPage";
 import AuthPage from "./components/auth/AuthPage";
 import DetailedAnalysisPage from "./pages/DetailedAnalysisPage";
+import ErrorPage from "./pages/ErrorPage";
 
 // import Dashboard from './pages/Dashboard'; // Placeholder for your Dashboard component
 // import Analyses from './pages/Analyses'; // Placeholder for your Analyses component
@@ -29,6 +30,7 @@ const AppRoutes = () => {
       />
       <Route path="/my-analyses" element={<UserAnalysesPage />} />
       <Route path="/detailed-analysis/:analysisId" element={<DetailedAnalysisPage />} />
+      <Route path="*" element={<ErrorPage />} />
 
       {/* <Route path="/analyses" element={<Analyses />} /> */}
       {/* Add additional routes as needed */}
