@@ -11,7 +11,7 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
   const dispatch = useDispatch();
 
 
-  const hideButtonPaths = ["/"];
+  const hideButtonPaths = ["/", "/login", "/signup", "/logout", "/verify-email"];
 
   const showButtons = !hideButtonPaths.includes(location.pathname);
 
