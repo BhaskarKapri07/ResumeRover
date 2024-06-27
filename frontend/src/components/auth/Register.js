@@ -42,7 +42,7 @@ const Register = () => {
 
         emailjs.send('service_p8h4vhi', 'template_6uptjsg', templateParams)
         .then((result) => {
-          console.log('Email sent : ', result.text);
+          // console.log('Email sent : ', result.text);
           setSuccessMessage("Registration successful! Please check your email to verify your account.");
           setTimeout(() => {
             navigate("/");

@@ -76,8 +76,6 @@ const DetailedAnalysisPage = () => {
             {result.requirements.filter((req) => req.satisfied).length} /
             {result.requirements.length} requirements satisfied
           </span>
-
-          {console.log("result", result)}
           <button onClick={() => handleViewDetails(index, result)}>
             View Details
           </button>

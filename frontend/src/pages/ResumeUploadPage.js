@@ -39,7 +39,7 @@ const ResumeUploadPage = () => {
 
     try {
       const sessionId = await createAnalysisSession();
-      console.log(sessionId);
+      // console.log(sessionId);
       if (!sessionId) {
         throw new Error("Failed to create analysis session.");
       }

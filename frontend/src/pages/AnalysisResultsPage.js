@@ -63,11 +63,11 @@ const AnalysisResultsPage = () => {
 
   useEffect(() => {
     const storedResults = loadFromSessionStorage();
-    console.log("storedResults", storedResults);
+    // console.log("storedResults", storedResults);
     if (storedResults) {
       setAnalysisResults(storedResults.candidates);
       setJobTitle(storedResults.jobDetails.title);
-      console.log("type", typeof storedResults);
+      // console.log("type", typeof storedResults);
       setIsLoading(false);
     } else if (jobUrl) {
       const fetchAnalysisResults = async () => {
@@ -92,7 +92,7 @@ const AnalysisResultsPage = () => {
 
           setAnalysisResults(sortedCandidates);
           setJobTitle(jobDetails.title);
-          console.log(response.data.newAnalysis);
+          // console.log(response.data.newAnalysis);
           saveToSessionStorage({
             ...response.data.newAnalysis,
             candidates: sortedCandidates, // Save sorted candidates
@@ -183,7 +183,6 @@ const AnalysisResultsPage = () => {
     <div className="analysis-results">
       <h1 className="analysis-results__title">Analysis Results </h1>
       <h2 className="analysis-results__job-title">{jobTitle}</h2>
-      {console.log("jobtitle", jobTitle)}
       {analysisResults.map((result, index) => (
         <div key={index} className="analysis-results__item">
           <span className="analysis-results__name">{result.name}</span>
