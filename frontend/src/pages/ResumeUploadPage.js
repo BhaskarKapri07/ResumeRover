@@ -17,6 +17,14 @@ const ResumeUploadPage = () => {
   };
 
   const handleFileChange = (event) => {
+    const files = Array.from(event.target.files);
+    const invalidFiles = files.filter(file => file.type !== "application/pdf");
+
+    if (invalidFiles.length > 0) {
+      alert("Please upload only PDF files.");
+      return;
+    }
+
     setSelectedFiles(event.target.files);
   };
 
