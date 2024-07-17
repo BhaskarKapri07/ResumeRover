@@ -19,7 +19,7 @@ ResumeRover is an innovative web application designed to automate and streamline
 
 The project is split into two main components:
 - **Frontend**: The user interface, built with React, provides interactive and dynamic web pages to handle user inputs and display data.
-- **Backend**: A Node.js/Express application that handles API requests, processes data, levrages LLM capacity to match, and interacts with a MongoDB database and a python backend that holds NER model to extract information from job descriptions. 
+- **Backend**: A Node.js/Express application that handles API requests, processes data, and interacts with a MongoDB database. The resume analysis and candidate matching are performed using Gemini's API.
 
 For detailed information on the setup, dependencies, and specific configurations of each component, please refer to the respective README files in the frontend and backend directories.
 
