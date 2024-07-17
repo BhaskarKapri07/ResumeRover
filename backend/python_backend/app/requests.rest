@@ -1,8 +1,0 @@
-POST http://localhost:8000/scrape-and-extract/
-
-{
-    "Content-Type": "application/json",
-    "url": "https://jobs.lever.co/fullstacklabs/60c2fcbd-40b0-41a5-9ada-b9bc115d0727"
-}
-
-
