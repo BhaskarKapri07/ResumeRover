@@ -6,7 +6,8 @@ ResumeRover is an innovative web application designed to automate and streamline
 
 ## Deployed Website 
 
-Check out the live application: [ResumeRover](https://resume-rover.vercel.app)
+Check out the live application: [ResumeRover](https://resume-rover.vercel.app) \
+Monitor the backend status: [Backend Status Page](https://cclqsgq5.status.cron-job.org/)
 
 [![Resume Rover](image/image.png)](https://youtu.be/eUdHY9dxI4Y "ResumeRover")
 

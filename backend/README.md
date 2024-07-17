@@ -21,3 +21,6 @@ The resume analysis and candidate matching functionalities are now performed usi
 ## Collaboration Between Services
 
 The Node/Express service handles all the core operations and interacts directly with Gemini's API for resume analysis. This streamlined communication improves efficiency and reduces complexity.
+
+## References
+The resume parsing algorithm has been taken from [Open Resume](https://github.com/xitanggg/open-resume)
