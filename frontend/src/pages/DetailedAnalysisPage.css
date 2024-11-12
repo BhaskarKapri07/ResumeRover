@@ -1,0 +1,141 @@
+.detailed-analysis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    background-color: var(--bg);
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .detailed-analysis__content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+  }
+  
+  .detailed-analysis__back-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px 24px;
+    background-color: var(--primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    z-index: 10;
+  }
+  
+  .detailed-analysis__back-button:hover {
+    background-color: var(--accent);
+    transform: translateX(-3px);
+  }
+  
+  .detailed-analysis__title {
+    color: var(--text-color);
+    font-size: 2rem;
+    text-align: center;
+    margin: 48px 0 16px;
+  }
+  
+  .detailed-analysis__job-title {
+    color: var(--primary);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  
+  .detailed-analysis__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .detailed-analysis__item {
+    background-color: var(--bg-variant);
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .detailed-analysis__name {
+    color: var(--text-color);
+    font-weight: bold;
+    flex: 0 1 auto;
+    min-width: 150px;
+  }
+  
+  .detailed-analysis__satisfied {
+    color: var(--primary);
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: auto;
+  }
+  
+  .detailed-analysis__view-button {
+    padding: 8px 16px;
+    background-color: var(--primary);
+    color: var(--text-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    margin-left: 24px;
+  }
+  
+  .detailed-analysis__view-button:hover {
+    background-color: var(--accent);
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .detailed-analysis {
+      padding: 16px;
+    }
+  
+    .detailed-analysis__back-button {
+      position: static;
+      margin-bottom: 20px;
+    }
+  
+    .detailed-analysis__title {
+      font-size: 1.5rem;
+      margin: 24px 0 16px;
+    }
+  
+    .detailed-analysis__job-title {
+      font-size: 1.25rem;
+      margin-bottom: 24px;
+    }
+  
+    .detailed-analysis__item {
+      padding: 12px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .detailed-analysis__name {
+      width: 100%;
+    }
+  
+    .detailed-analysis__satisfied {
+      margin-left: 0;
+    }
+  
+    .detailed-analysis__view-button {
+      width: 100%;
+      margin-left: 0;
+      padding: 12px;
+      text-align: center;
+    }
+  }

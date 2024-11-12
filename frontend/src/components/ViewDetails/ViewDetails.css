@@ -2,49 +2,109 @@
   display: flex;
   flex-direction: column;
   background-color: var(--bg-variant);
-  padding: 20px;
+  padding: 32px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .view-details__title {
   color: var(--text-color);
-  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-bottom: 32px;
+  text-align: center;
 }
 
 .view-details__section {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .view-details__heading {
-  color: var(--text-color);
-  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--primary);
+  position: relative;
+}
+
+.view-details__heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary);
 }
 
 .view-details__list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .view-details__item {
   color: var(--text-color);
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  transition: all 0.2s ease;
 }
 
 .view-details__item--satisfied {
-  background-color: var(--border-color);
+  background-color: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.1);
 }
 
 .view-details__item--not-satisfied {
-  background-color: var(--bg-variant);
+  background-color: rgba(255, 0, 0, 0.05);
+  border: 1px solid rgba(255, 0, 0, 0.1);
 }
 
 .view-details__explanation {
   color: var(--secondary-text-color);
-  font-size: smaller;
-  margin-top: 5px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  line-height: 1.5;
 }
 
-/* Additional styling can be added based on the specific needs or responsive design */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .view-details {
+    padding: 20px;
+  }
+
+  .view-details__title {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+
+  .view-details__heading {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .view-details__item {
+    padding: 12px;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 350px) {
+  .view-details {
+    padding: 16px;
+  }
+
+  .view-details__title {
+    font-size: 1.25rem;
+  }
+
+  .view-details__heading {
+    font-size: 1.1rem;
+  }
+}

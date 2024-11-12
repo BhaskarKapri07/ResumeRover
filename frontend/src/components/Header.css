@@ -1,70 +1,115 @@
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2rem;
+  flex-direction: column;
+  padding: 0.75rem 2rem;
   background-color: var(--bg);
   color: var(--primary);
-  /* Add additional styling as needed */
+  width: 100%;
+  box-sizing: border-box;
+  gap: 0.75rem;
+}
+
+/* Top row container */
+.header__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
 }
 
 .header__logo {
+  color: #FF4500;
   font-size: 2rem;
   cursor: pointer;
-  /* Add additional styling as needed */
+  white-space: nowrap;
+  margin: 0;
 }
 
+.header__toggle {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bottom row container */
 .header__actions {
   display: flex;
   align-items: center;
-  /* Add additional styling as needed */
+  justify-content: center; /* Center the action buttons */
+  gap: 0.75rem;
+  width: 100%;
 }
 
-.header__toggle,
 .header__my-analyses-button,
 .header__new-analyses-button,
 .header__logout-button {
   padding: 0.5rem 1rem;
-  margin-left: 1rem;
   border: none;
   border-radius: 4px;
-  border: 1px solid var(--border-color);
-  background-color: var(--primary);
-  color: var(--text-color);
+  background-color: #FF4500;
+  color: white;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  /* Add additional styling as needed */
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .header__toggle:hover,
 .header__my-analyses-button:hover,
+.header__new-analyses-button:hover,
 .header__logout-button:hover {
-  background-color: var(--accent);
-}
-
-/* If you need a specific style for the toggle icon */
-.header__toggle .fa,
-.header__my-analyses-button .fa,
-.header__logout-button .fa {
-  margin-right: 8px;
+  opacity: 0.9;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header {
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
   }
 
   .header__logo {
     font-size: 1.5rem;
   }
 
-  .header__toggle,
+  .header__actions {
+    gap: 0.5rem;
+  }
+
   .header__my-analyses-button,
+  .header__new-analyses-button,
   .header__logout-button {
-    padding: 0.5rem;
-    margin-left: 0.5rem;
+    padding: 0.4rem 0.75rem;
     font-size: 0.875rem;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.5rem;
+  }
+
+  .header__logo {
+    font-size: 1.25rem;
+  }
+
+  .header__my-analyses-button,
+  .header__new-analyses-button,
+  .header__logout-button {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .header__toggle {
+    padding: 0.35rem;
   }
 }

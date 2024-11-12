@@ -2,35 +2,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 32px;
+  justify-content: flex-start; /* Changed from center to prevent overflow issues */
+  padding: 16px; /* Reduced padding for mobile */
   background-color: var(--bg);
-  height: 100vh;
-  margin-top: -7rem;
+  min-height: 100vh; /* Changed from height to min-height */
+  margin-top: 0; /* Remove negative margin that could cause scroll */
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in width */
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .resume-upload__title {
   color: var(--primary);
   margin-bottom: 24px;
+  text-align: center; /* Center text */
+  font-size: 1.75rem; /* Slightly smaller font size */
+  padding: 0 16px; /* Add some padding for very small screens */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resume-upload__form {
   width: 100%;
   max-width: 500px;
   background-color: var(--bg-variant);
-  padding: 32px;
+  padding: 24px 16px; /* Adjusted padding */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Ensure padding is included in width */
+  margin: 0 auto; /* Center the form */
 }
 
 .resume-upload__form-group {
   margin-bottom: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .resume-upload__label {
   display: block;
   color: var(--text-color);
   margin-bottom: 8px;
+  font-size: 0.9rem; /* Slightly smaller font for mobile */
 }
 
 .resume-upload__input {
@@ -40,6 +53,8 @@
   border: 1px solid var(--border-color);
   color: var(--text-color);
   background-color: var(--bg);
+  box-sizing: border-box;
+  font-size: 0.9rem; /* Slightly smaller font for mobile */
 }
 
 .resume-upload__input--file {
@@ -127,9 +142,52 @@
   }
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
+  .resume-upload {
+    padding: 16px 8px;
+  }
+
+  .resume-upload__title {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+
   .resume-upload__form {
     padding: 16px;
+    margin: 0 8px;
+    width: calc(100% - 16px); /* Account for margins */
+  }
+
+  .resume-upload__form-group--file {
+    padding: 12px;
+  }
+
+  .resume-upload__file-button {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .resume-upload__button {
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Additional breakpoint for very small screens */
+@media (max-width: 350px) {
+  .resume-upload {
+    padding: 12px 4px;
+  }
+
+  .resume-upload__title {
+    font-size: 1.25rem;
+  }
+
+  .resume-upload__form {
+    padding: 12px;
+  }
+
+  .resume-upload__input {
+    font-size: 0.85rem;
   }
 }

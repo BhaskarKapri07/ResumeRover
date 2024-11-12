@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import customAxios from "../api/axios"; // Ensure this path is correct for your setup
 import Spinner from "../components/spinner/Spinner"; // Adjust path as necessary
+import "./DetailedAnalysisPage.css"; 
 
 const DetailedAnalysisPage = () => {
   const { analysisId } = useParams();
@@ -61,28 +62,34 @@ const DetailedAnalysisPage = () => {
     navigate(-1);
   };
 
-  // Mimicking the rendering from AnalysisResultsPage
   return (
-    <div className="analysis-results">
-      <button onClick={handleBack} className="candidate-details__back-button">
-        Go Back
-      </button>
-      <h1 className="analysis-results__title">Analysis Details</h1>
-      <h2>{jobTitle}</h2>
-      {analysisDetails.candidates.map((result, index) => (
-        <div key={index} className="analysis-results__item">
-          <span>{result.name}</span>
-          <span className="analysis-results__satisfied">
-            {result.requirements.filter((req) => req.satisfied).length} /
-            {result.requirements.length} requirements satisfied
-          </span>
-          <button onClick={() => handleViewDetails(index, result)}>
-            View Details
+      <div className="detailed-analysis">
+        <div className="detailed-analysis__content-wrapper">
+          <button onClick={handleBack} className="detailed-analysis__back-button">
+            Go Back
           </button>
+          <h1 className="detailed-analysis__title">Analysis Details</h1>
+          <h2 className="detailed-analysis__job-title">{jobTitle}</h2>
+          <div className="detailed-analysis__list">
+            {analysisDetails.candidates.map((result, index) => (
+              <div key={index} className="detailed-analysis__item">
+                <span className="detailed-analysis__name">{result.name}</span>
+                <span className="detailed-analysis__satisfied">
+                  {result.requirements.filter((req) => req.satisfied).length} /
+                  {result.requirements.length} requirements satisfied
+                </span>
+                <button 
+                  onClick={() => handleViewDetails(index, result)}
+                  className="detailed-analysis__view-button"
+                >
+                  View Details
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  );
+      </div>
+    );
 };
 
 export default DetailedAnalysisPage;

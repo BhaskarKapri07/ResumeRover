@@ -9,7 +9,7 @@ const CandidateDetailsPage = () => {
   const candidate = location.state?.candidate;
 
   const handleBack = () => {
-    navigate(-1); // Navigate back to the Analysis Results page
+    navigate(-1);
   };
 
   if (!candidate) {
@@ -22,13 +22,15 @@ const CandidateDetailsPage = () => {
 
   return (
     <div className="candidate-details">
-      <button onClick={handleBack} className="candidate-details__back-button">
-        Go Back
-      </button>
-      <ViewDetails
-        candidate={candidate}
-        className="candidate-details__view-details"
-      />
+      <div className="candidate-details__content-wrapper">
+        <button onClick={handleBack} className="candidate-details__back-button">
+          Go Back
+        </button>
+        <ViewDetails
+          candidate={candidate}
+          className="candidate-details__view-details"
+        />
+      </div>
     </div>
   );
 };

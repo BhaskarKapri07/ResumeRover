@@ -10,57 +10,48 @@ const Header = ({ isLightMode, toggleTheme, handleLogout }) => {
   const location = useLocation();
   const dispatch = useDispatch();
 
-
   const hideButtonPaths = ["/", "/login", "/signup", "/logout", "/verify-email"];
-
   const showButtons = !hideButtonPaths.includes(location.pathname);
 
-  // Handler for navigating to the My Analyses page
   const navigateToMyAnalyses = () => {
     navigate("/my-analyses");
   };
 
-  const handleNewAnalysis = () =>{
+  const handleNewAnalysis = () => {
     dispatch(newAnalysis())
     navigate("/resume-upload");
-
   }
-
-  // const handleLogin = () => {
-  //   navigate("/login");
-  // };
-
-  // const handleRegister = () => {
-  //   navigate("/register");
-  // };
-  
 
   return (
     <header className="header">
-      <h1 className="header__logo" >ResumeRover</h1>
-      <div className="header__actions">
+      <div className="header__top">
+        <h1 className="header__logo">ResumeRover</h1>
         <button className="header__toggle" onClick={toggleTheme}>
           {isLightMode ? <FaSun /> : <FaMoon />}
         </button>
-        {showButtons && (
+      </div>
+      {showButtons && (
+        <div className="header__actions">
           <button
             onClick={navigateToMyAnalyses}
             className="header__my-analyses-button"
           >
             My Analyses
           </button>
-        )}
-        {showButtons && (
-          <button onClick={handleNewAnalysis} className="header__new-analyses-button">
+          <button 
+            onClick={handleNewAnalysis} 
+            className="header__new-analyses-button"
+          >
             New Analysis
           </button>
-        )}
-        {showButtons && (
-          <button onClick={handleLogout} className="header__logout-button">
+          <button 
+            onClick={handleLogout} 
+            className="header__logout-button"
+          >
             Logout
           </button>
-        )}
-      </div>
+        </div>
+      )}
     </header>
   );
 };
